@@ -14,5 +14,5 @@ else{
 }
 setcookie("cook",1, time() + 3600);
 file_put_contents($archivo, $conta);
-echo $conta;
+echo 'I visitatori sono '+$conta;
 ?>
