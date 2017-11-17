@@ -4,7 +4,7 @@ if(file_exists($archivo)){
   $conta = file_get_contents($archivo);
   $cook= $_COOKIE[‘cook’]; // leggo cookie
     if (!$cook)
-       $conta ++; // // se non esiste incremento le visite
+       $conta +=1; // // se esiste incremento le visite
 }
 else{
 // creo l'archivio (SOLO LA PRIMA VOLTA)  
