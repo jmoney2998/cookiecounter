@@ -18,5 +18,5 @@ setcookie("yaHasEstadoAqui",1, time() + 3600);
 
 // Grabamos contador
 file_put_contents($archivo, $contador); // solo PHP 5!!!
-
+echo $contador
 ?> 
