@@ -13,6 +13,6 @@ else{
   $conta = 1;
 }
 setcookie("cook",1, time() + 3600);
-//file_put_contents($archivo, $conta);
+file_put_contents($archivo, $conta);
 echo $conta
 ?>
