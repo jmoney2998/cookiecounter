@@ -1,19 +1,16 @@
 <?php
-$archivo = "contador.txt"; // Archivo con el numero de visitas
-// Leemos las visitas.
+$archivo = "conta.txt"; // n visitatori
 if(file_exists($archivo)){
-$contador = file_get_contents($archivo);
-$yaHasEstadoAqui = $_COOKIE[‘yaHasEstadoAqui’]; // Intentamos leer la cookie
-if (!$yaHasEstadoAqui)$contador ++; // // si NO existe la cookie, incrementamos las visitas
+$conta = file_get_contents($archivo);
+$cook= $_COOKIE[‘cook’]; // leggo cookie
+if (!$cook)$conta ++; // // se non esiste ncremento le visite
 }else{
-// Crear archivo contador. Será con la 1ª visita
+// creo l'archivio (SOLO LA PRIMA VOLTA)
 touch($archivo);
-chmod($archivo, 0755);
-$contador = 1; // Valor por defecto si no existe fichero de visitas
+chmod($archivo, 755);
+$conta = 1;
 }
-// Grabamos cookie de 1 hora de duracion
-setcookie("yaHasEstadoAqui",1, time() + 3600);
-// Grabamos contador
-file_put_contents($archivo, $contador); // solo PHP 5!!!
-echo $contador
+setcookie("cook",1, time() + 3600);
+file_put_contents($archivo, $conta);
+echo $conta
 ?>
