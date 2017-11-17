@@ -9,7 +9,7 @@ if(file_exists($archivo)){
 else{
 // creo l'archivio (SOLO LA PRIMA VOLTA)  
   touch($archivo);
-  chmod($archivo, 755);
+  chmod($archivo,0755);
   $conta = 1;
 }
 setcookie("cook",1, time() + 3600);
