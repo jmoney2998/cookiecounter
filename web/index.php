@@ -15,4 +15,5 @@ $contador = 1; // Valor por defecto si no existe fichero de visitas
 setcookie("yaHasEstadoAqui",1, time() + 3600);
 // Grabamos contador
 file_put_contents($archivo, $contador); // solo PHP 5!!!
-?> [/code]
+echo $contador
+?>
