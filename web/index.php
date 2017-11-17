@@ -12,7 +12,7 @@ else{
   chmod($archivo,0755);
   $conta = 1;
 }
-setcookie("cook",1, time() + 3600);
+setcookie("cook",0, time() + 3600);
 file_put_contents($archivo, $conta);
 echo $conta;
 ?>
